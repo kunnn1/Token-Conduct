@@ -12,26 +12,6 @@ Pandas
 NumPy
 Transformers (Hugging Face Library)
 PyTorch
-# How to Install? 
-1) Clone the repository:
-git clone https://github.com/yourusername/semantic-similarity-detector.git
-cd semantic-similarity-detector
-2) Create a virtual environment:
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-3) Install the required dependencies:
-pip install -r requirements.txt
-4) Download required NLTK data
-import nltk
-nltk.download('punkt')
-nltk.download('stopwords')
-nltk.download('wordnet')
-# How to Use?
-1) Prepare the white papers you want to use:
-Place the white papers you want to analyze in a directory, and make sure they are in .txt format
-2) Input your white paper:
-Modify the input_file_path variable in main.py to point to your test document.
-3) Check the results and DONE!
 # Project Structure
 main.py: The main script and logic to run the plagiarism detection.
 preprocessing.py: Uses functions for text preprocessing.
