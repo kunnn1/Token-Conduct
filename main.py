@@ -38,7 +38,7 @@ def detect_plagiarism(input_paper, whitepaper_df, threshold=0.9):
 def main():
     logger.info("Starting main function...")
     whitepaper_dir = "/Users/khasimamedu/Downloads/whitepapers/txt_whitepapers_np"
-    input_file_path = "/Users/khasimamedu/Project #1 - Comparative Semantic Analysis of Crypto White Paper Texts/Project 1 White Paper Test.txt"
+    input_file_path = "your_input_whitepaper"
 
     if not os.path.exists(whitepaper_dir):
         logger.error(f"Whitepaper directory '{whitepaper_dir}' does not exist.")
