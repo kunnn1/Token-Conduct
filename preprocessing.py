@@ -1,9 +1,5 @@
 import nltk
 import ssl
-import logging
-
-logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger(__name__)
 
 try:
     _create_unverified_https_context = ssl._create_unverified_context
@@ -17,9 +13,9 @@ def download_nltk_resources():
     for resource in resources:
         try:
             nltk.download(resource, quiet=True)
-            logger.info(f"Successfully downloaded {resource}")
+            print(f"Successfully downloaded {resource}")
         except Exception as e:
-            logger.error(f"Error downloading {resource}: {str(e)}")
+           print(f"Error downloading {resource}: {str(e)}")
 
 download_nltk_resources()
 
@@ -55,24 +51,20 @@ def preprocess_text(text):
         
         return preprocessed_text
     except Exception as e:
-        logger.error(f"Error preprocessing text: {e}")
-        return text  # Return original text if preprocessing fails
+        print(f"Error preprocessing text: {e}")
+        return text  
 
 def preprocess_whitepaper(whitepaper_text):
     try:
-        # Split the whitepaper into sentences
+      
         sentences = sent_tokenize(whitepaper_text)
         
-        # Preprocess each sentence
         preprocessed_sentences = [preprocess_text(sentence) for sentence in sentences]
         
-        # Join preprocessed sentences back into a single text
         preprocessed_whitepaper = ' '.join(preprocessed_sentences)
         
         return preprocessed_whitepaper
     except Exception as e:
-        logger.error(f"Error preprocessing whitepaper: {e}")
-        return whitepaper_text  # Return original text if preprocessing fails
-
-if __name__ == "__main__":
+        print(f"Error preprocessing whitepaper: {e}")
+        return whitepaper_text 
  
