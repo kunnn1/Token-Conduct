@@ -27,10 +27,3 @@ def get_bert_embedding(text):
     sentence_embedding = torch.mean(torch.stack(token_vecs_sum), dim=0)
 
     return sentence_embedding.numpy()
-
-if __name__ == "__main__":
-    # Test the function
-    sample_text = "This is a sample sentence to test BERT embeddings."
-    embedding = get_bert_embedding(sample_text)
-    print(f"Shape of embedding: {embedding.shape}")
-    print(f"Sample of embedding: {embedding[:5]}")
