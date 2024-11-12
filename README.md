@@ -3,7 +3,7 @@ My  project is a semantic similarity detector designed to identify and measure t
 # Who Am I?
 My name is Khasim Amedu and I am incoming freshman @ UIC and an aspiring AI/Machine Learning Engineer and Researcher. My Portfolio: https://kunnn1.github.io/
 # Motivation
-The inspiration behind my project goes back to a project in my senior year of high school in my AP Government class, where students were to submit bill propositions that address pertinent real-world issues and aim to get our proposed bills passed. While our bill ended up passing a unanimous vote, there was a particular bill proposed by a group of my classmates that I believed deserved to be passed, which was an act delineating the regulation of cryptocurrency under the principles of laissez-faire and our American economy to prevent cases of cryptocurrency scams amidst the alarming figures. Being aware of just how much a lack of regulation contributes to the rise of cryptocurrency scams, I wanted to create a project that could mitigate an infinitesimal part of the horizon of cryptocurrency fraud. Therefore, my project aims to provide a robust tool for detecting plagiarism in the rapidly growing field of cryptocurrency. With the increasing number of white papers being published, it is critical to have a reliable method to ensure the originality and authenticity of these documents.
+The project is a collaboration between my upperclassmen friends, Sam and Arnav who helped me lay out the edge cases and dependencies of this idea and drawing out the basic skeleton of what this tool would look like. Huge thanks to them!
 # Appartus/Tech Used
 Python
 
