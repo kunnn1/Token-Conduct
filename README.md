@@ -1,23 +1,21 @@
 # TokenConduct
-My  project is a semantic similarity detector designed to identify and measure the similarity between different crypto white papers. The primary goal is to detect potential plagiarism and ensure the originality of academic and technical documents in the cryptocurrency domain, addressing the common fraud assoicated with white papers and fake ICOs. The detector uses natural language processing (NLP) techniques, specifically BERT embeddings, to calculate the semantic similarity between documents.
+TokenConduct is my semantic plagiarism detection tool that leverages B.E.R.T. sentence vector embeddings from Google's B.E.R.T encoder Transformers architecture to detect potential cases of semantic plagairsim of fradulent/recycled ICO whitepapers, a common form of cryptocurrency fraud. I processed a Figshare database of over 1,300+ genuine ICO whitepapers from various cryptocurrencies and blockchains such as Bitcoin and EtheruemX using pre-processing techiques such as B.E.R.T. tokenization, lemmatization and stop-word removal to clean the data for the uncased B.E.R.T. model. From there, the tokenized embeddings are fed into the B.E.R.T architecture and yield high-dimensional bidrectional contextualized embeddings that encode the essential semantic information of the database of genuine ICO whitepapers, and compares the input ICO whitepaper vector embedding to over 1,300+ crypto whitepapers using cosine similarity with a semantic similarity parametric threshold of 95% and scores the potential semantic plagairism of your input ICO whitepaper with the result of such cosine similarity. 
 # Who Am I?
-My name is Khasim Amedu and I am incoming freshman @ UIC and an aspiring AI/Machine Learning Engineer and Researcher. My Portfolio: https://kunnn1.github.io/
+My name is Khasim Amedu and I am incoming freshman @ UIC and an aspiring Machine Learning Engineer and Quantitative Developer/Trader. My Portfolio: https://kunnn1.github.io/
 # Motivation
-The project is a collaboration between my upperclassmen friends, Sam and Arnav who helped me lay out the edge cases and dependencies of this idea and drawing out the basic skeleton of what this tool would look like. Huge thanks to them!
-# Appartus/Tech Used
-Python
+The project is a collaboration between me and my upperclassmen friends, Sam and Arnav who helped me lay out the edge cases and dependencies of this idea and drawing out the basic skeleton of what this tool would look like. Huge thanks to them!
+# Appartus
+- Python
 
-BERT (Bidirectional Encoder Representations from Transformers)
+- B.E.R.T. (Transformers)
 
-NLTK (Natural Language Toolkit)
+- NLTK (Natural Language Toolkit)
 
-Pandas
+- Pandas
 
-NumPy
+- NumPy
 
-Transformers (Hugging Face Library)
-
-PyTorch
+- PyTorch
 # How to Install?
 1. Clone this repository:
    
@@ -59,9 +57,5 @@ extract_text.py: Uses functions to extract text from files.
 
 downloads.py: Handles downloading necessary resources or datasets.
 
-requirements.txt: Lists all the dependencies required for you to use the project. 
-
-# How the Plagairism Detector Actually (Basically) Works
-The detector intitally extracts text from inputted .txt file converting them into plain text that can be proccessed and analyzed. The extracted text is then cleaned and standardized by removing punctuation and numbers, converting to lowercase, eliminating stopwords, tokenization and lemmatization. This new preprocessed text is "fed" into a pre-trained BERT model, which generates numerical representations or embeddings that capture the semantic meaning of the text (roughly). The detector then compares the BERT embeddings of the input white paper against those of other documents in the crypto white paper database authroed by Sergi Valverde and Salva Duran-Nebreda (you can find on figshare :D) using cosine similarity to measure the semantic similarity. The white paper documents with cosine similarity scores above a predefined threshold of 0.9 are flagged as potential plagiarism cases, indicating a high degree of semantic similarity with the input white paper document. The output result of the program generates a report listing all flagged white papers and their similarity scores so that you can go back and review your white paper with the flagged ones.
 # Drawbacks/Limits
 The semantic similarity detector is pretty intensive, requiring significant processing power and time, especially for large datasets, which limits scalability and convenience as a tool for users. The testing phase of this building this detector adduced struggle with sophisticated paraphrasing, cross-lingual plagiarism, and nuanced domain-specific content, potentially leading to false positives. Additionally, the effectiveness depends on setting appropriate similarity thresholds and may require frequent updates to stay relevant as language evolves. Otherwise, it's pretty decent. 
