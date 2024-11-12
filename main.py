@@ -57,6 +57,3 @@ def main():
             print(f"Matched paper: {paper}\n")
     except Exception as e:
         print(f"An error occurred in main: {str(e)}")
-
-if __name__ == "__main__":
-    main()
